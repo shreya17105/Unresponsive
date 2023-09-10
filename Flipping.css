@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(1, 1, 36);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+section::before{
+    content: "";
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+    transform: translate(-150px ,-100px);
+}
+section::after{
+    content: "";
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+    transform: translate(150px ,100px);
+    z-index: 1;
+}
+
+.front-face{
+    width: 350px;
+    height: 200px;
+    background-color: rgba(168, 160, 160, 0.322);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 10px 15px;
+    backface-visibility: hidden;
+}
+.universal{
+    position: absolute;
+    /* left: 38%;
+    top: 35%; */
+    transform-style: preserve-3d;
+    transition-property: all;
+    transition-duration: 2s;
+    z-index: 20;
+    
+}
+ .universal:hover{
+    transform: rotateY(180deg);
+   
+}
+header{
+    height: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    width: 60px;
+}
+.text{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: 900;
+}
+.card_details{
+    margin-top: 20px;
+    color: white;
+}
+.card_details p{
+    font-size: 20px;
+}
+.card_details h5{
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.owner{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.owner p{
+    font-size: 20px;
+    font-weight:300;
+}
+.date{
+ text-align: center;
+ width: 80px;
+}
+.date p{
+    letter-spacing: 3px;
+    font-weight:800;
+}
+
+/* BACK FACE */
+.back-face{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 350px;
+    height: 202px;
+    background-color: rgba(168, 160, 160, 0.322);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 5px 15px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+header h6{
+font-weight:normal;
+color: white;
+}
+.strip{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+}
+.cvv {
+   position: absolute;
+   top:90px;
+   display: flex;
+    
+    align-items: center;
+}
+.whit{
+    min-width: 300px;
+    background-color: aliceblue;
+    height: 30px;
+    border-radius: 3px;
+}
+.cvv p{
+    position: absolute;
+    left:299px;
+background-color: white;
+border-radius: 3px;
+z-index: -1;
+}
+.dummy{
+    
+    position: absolute;
+    top: 125px;
+    color: white;
+    font-weight:normal;
+    font-size: 12px;
+}
+
+/* BACDROP_FILTER
+BACKFACE VISIBILTY
+TRANSFORMSTYLE
+PERSPECTIVE */
